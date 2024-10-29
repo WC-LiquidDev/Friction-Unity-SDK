@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-using Newtonsoft.Json; // Add Newtonsoft.Json for handling Dictionary serialization
+using Newtonsoft.Json; 
 
 namespace Friction
 {
@@ -25,7 +25,7 @@ namespace Friction
 
         private IEnumerator PostRequestCoroutine(string url, Dictionary<string, object> data, System.Action<string> onSuccess, System.Action<string> onError, string authHeader)
         {
-            string jsonData = JsonConvert.SerializeObject(data); // Serialize Dictionary to JSON
+            string jsonData = JsonConvert.SerializeObject(data); 
             byte[] jsonBytes = System.Text.Encoding.UTF8.GetBytes(jsonData);
 
             using (UnityWebRequest www = new UnityWebRequest(url, "POST"))
