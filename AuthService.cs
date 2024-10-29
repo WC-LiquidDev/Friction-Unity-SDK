@@ -23,7 +23,7 @@ namespace Friction
 
         private static string ExtractSessionToken(string jsonResponse)
         {
-            return jsonResponse;  // Replace with actual parsing if necessary
+            return jsonResponse;
         }
     }
 }
